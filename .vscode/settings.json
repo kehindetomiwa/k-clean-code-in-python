@@ -9,5 +9,5 @@
       "python.linting.lintOnSave": true,
       "python.linting.enabled": true,
       "python.linting.pylintPath": "pylint",
-      "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true
 }
