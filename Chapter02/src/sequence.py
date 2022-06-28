@@ -1,3 +1,8 @@
+"""Clean Code in Python - Chapter 2: Pythonic Code
+> Sequences
+"""
+
+
 class MyItems:
 
     def __init__(self, *values) -> None:
