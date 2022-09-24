@@ -1,13 +1,9 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.formatOnSave": true
-      },
-      "python.formatting.provider": "yapf",
-      "python.formatting.yapfPath": "/Users/kehindetomiwa/opt/anaconda3/envs/cleancode01/bin/yapf",
-      "python.formatting.blackPath": "/Users/kehindetomiwa/opt/anaconda3/envs/cleancode01/bin/black",
-      "python.linting.lintOnSave": true,
-      "python.linting.enabled": true,
-      "python.linting.pylintPath": "pylint",
-    "python.linting.pylintEnabled": true
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "autopep8",
+  "python.formatting.blackPath": "/Users/kehindetomiwa/opt/anaconda3/envs/cleancode01/bin/black",
+  "python.linting.enabled": true,
+  "python.formatting.blackArgs": [
+    "-l 120"
+  ]
 }
