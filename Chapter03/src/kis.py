@@ -30,6 +30,7 @@ cn = ComplicatedNamespace.init_with_data(
 print(cn.id_, cn.user, cn.location)
 #(42, 'root', '127.0.0.1')
 print(hasattr(cn, "user"))
+print(hasattr(cn, "extra"))
 
 
 class Namespace:
@@ -56,3 +57,4 @@ cn2 = Namespace(
 print(cn2.id_, cn2.user, cn2.location)
 #(42, 'root', '127.0.0.1')
 print(hasattr(cn2, "user"))
+print(hasattr(cn2, "extra"))

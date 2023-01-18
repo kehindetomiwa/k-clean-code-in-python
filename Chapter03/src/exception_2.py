@@ -4,7 +4,6 @@ Error Handling - Exceptions
 
 import logging
 import time
-import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -43,7 +42,8 @@ def connect_with_retry(connector: Connector, retry_n_times: int, retry_threshold
         try:
             return connector.connect()
         except ConnectionError as e:
-            logger.info("%s: attempting new connection on %is", e, retry_threshold)
+            logger.info("%s: attempting new connection on %is",
+                        e, retry_threshold)
             time.sleep(retry_threshold)
     exc = ConnectionError(f"Couldn't connect after {retry_n_times} times")
     logger.exception(exc)
@@ -61,7 +61,8 @@ class DataTransport:
         self.connection = None
 
     def deliver_event(self, event):
-        self.connection = connect_with_retry(self._connector, self.retry_n_times, self.retry_threshold)
+        self.connection = connect_with_retry(
+            self._connector, self.retry_n_times, self.retry_threshold)
         self.send(event)
 
     def send(self, event):
